@@ -1,18 +1,17 @@
 import React from 'react';
-import { About, Navbar, Header, Feature, Service, Testimonial, Footer } from './components';
+import { Navbar, Header, Service, Footer } from './components';
+import { About, Testimonial, Features } from './containers';
 
 function App () {
   return (
-    <div>
+    <div className='container'>
       <Navbar />
       <Header />
-      <div>
-        <About />
-        <Feature />
-        <Service />
-        <Testimonial />
-        <Footer />
-      </div>
+      <About />
+      <Features />
+      <Service />
+      <Testimonial />
+      <Footer />
     </div>
   );
 }
