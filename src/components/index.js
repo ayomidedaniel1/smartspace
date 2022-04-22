@@ -1,4 +1,4 @@
-export { default as Feature } from './Feature';
+export { default as Property } from './Property';
 export { default as Footer } from './Footer';
 export { default as Header } from './Header';
 export { default as Navbar } from './Navbar';

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Navbar, Header, Service, Footer } from './components';
-import { About, Testimonial, Features } from './containers';
+import { Footer, Header, Navbar, Service } from './components';
+import { About, Features, Testimonial } from './containers';
 
-function App () {
+const App = () => {
   return (
     <div className='container'>
       <Navbar />
@@ -14,6 +14,6 @@ function App () {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

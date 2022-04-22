@@ -1,24 +1,7 @@
 import React from 'react';
-import { Property, Research, Valuation } from '../assets';
 import { Works } from '../components';
 
-const worksData = [
-  {
-    img: Research,
-    title: 'Research Suburbs',
-    text: 'Wonder twenty hunted and put income set desire expect. Am cottage calling.'
-  },
-  {
-    img: Valuation,
-    title: 'Instant Valuation',
-    text: 'Conveying or northward offending admitting perfectly my. Colonel gravit and moonlight.'
-  },
-  {
-    img: Property,
-    title: 'Track Property',
-    text: 'Moderate children at of outweigh it. Unsatiable it considered invitation he travelling insensible.'
-  }
-];
+import { worksData } from '../constants';
 
 const About = () => {
   return (

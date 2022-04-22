@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillLinkedin } from 'react-icons/ai';
 import { Head, Buzz, Chase, Microsoft, Gucc, Airbnb, Uber } from '../assets';
 
+import { getPropertiesData } from '../api/index';
+
 const Header = () => {
+  const [properties, setProperties] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    getPropertiesData()
+      .then((data) => {
+        console.log(data);
+        setProperties(data);
+      });
+  }, []);
+
   return (
-    <div id='home' className="h-full flex flex-col lg:flex-row md:justify-between lg:mt-20 md:mt-10 mt-6 md:px-10 sm:px-6 px-2">
-      <div className="flex flex-col">
+    <div id='home' className="h-full flex flex-col lg:flex-row md:justify-between lg:mt-20 md:mt-10 mt-6 lg:px-10">
+      <div className="flex flex-col fadeLeftMini">
         <h3 className='uppercase font-dmsans font-bold text-text-orange lg:text-lg md:text-base sm:text-sm text-xs'>
           residential and office space
         </h3>
-        <h1 className='capitalize font-manrope font-extrabold text-black lg:text-[2.5rem] md:text-[2.3rem] sm:text-[1.5rem] text-[1.2rem]'>
+        <h1 className='capitalize font-manrope font-extrabold text-black lg:text-[3rem] md:text-[3rem] sm:text-[1.5rem] text-[1.2rem] md:pr-20 lg:pr-1'>
           smart living style for smart people
         </h1>
-        <h2 className="font-manrope sm:leading-5 text-text-black md:text-sm sm:text-xs text-[0.65rem] leading-3 tracking-[0.01rem]">Much did had call new drew that kept. Limits expect wonder law she. Now has you views woman noisy match money rooms.</h2>
+        <h2 className="font-manrope sm:leading-5 text-text-black md:text-sm pr-1 md:pr-20 lg:pr-10 sm:text-xs text-[0.5rem] leading-3 tracking-[0.01rem]">Much did had call new drew that kept. Limits expect wonder law she. Now has you views woman noisy match money rooms.</h2>
 
         <div className='md:py-6 sm:py-4 py-2'>
           <input

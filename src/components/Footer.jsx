@@ -1,14 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const navigation = [
-  { name: 'Home', href: '/home' },
-  { name: 'About', href: '/about' },
-  { name: 'Service', href: '/service' },
-  { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
-];
+import { navigation } from '../constants';
 
 const Footer = () => {
   return (

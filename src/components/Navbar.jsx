@@ -2,14 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { RiCloseLine, RiMenu3Line } from 'react-icons/ri';
 
-const navigation = [
-  { name: 'Home', href: '/home' },
-  { name: 'About', href: '/about' },
-  { name: 'Service', href: '/service' },
-  { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
-];
+import { navigation } from '../constants';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -19,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between items-center h-16 bg-white text-black relative shadow-sm text-base font-bold">
-      <Link to='/' className='md:pl-10 sm:pl-4 pl-0' role="navigation">
+      <Link to='/' className='lg:pl-10 md:pl-3 sm:pl-1 pl-0' role="navigation">
         <span className="font-manrope text-text-black md:text-2xl text-xl font-extrabold cursor-pointer">SmartSpace</span>
       </Link>
       <div className="-mx-2 cursor-pointer lg:hidden sm:pr-0 md:pr-16 absolute top-5 right-4 z-20" onClick={handleClick}>

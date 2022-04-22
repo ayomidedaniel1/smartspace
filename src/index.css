@@ -62,3 +62,31 @@ html {
 .divider {
   border: 1px solid #dedfe1;
 }
+
+.property {
+  border-radius: 5px;
+}
+
+.featured {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.fadeLeftMini {
+  animation: fadeLeftMini 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeLeftMini {
+  0% {
+    opacity: 0;
+    transform: translate3d(-40%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
