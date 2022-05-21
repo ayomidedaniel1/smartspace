@@ -7,27 +7,27 @@ export const worksData = [
   {
     img: Research,
     title: 'Research Suburbs',
-    text: 'Wonder twenty hunted and put income set desire expect. Am cottage calling.'
+    text: 'Custom made desks, mix of sitting and standing workspaces, state-of-the-art AC system, top notch location.'
   },
   {
     img: Valuation,
     title: 'Instant Valuation',
-    text: 'Conveying or northward offending admitting perfectly my. Colonel gravit and moonlight.'
+    text: "Access to community's online member network, conference room bookings. Actual office space that promotes productivity."
   },
   {
     img: Property,
     title: 'Track Property',
-    text: 'Moderate children at of outweigh it. Unsatiable it considered invitation he travelling insensible.'
+    text: 'Beautiful setting, abundant natural light, amazing comfort, super-fast internet, industrial style interior.'
   }
 ];
 
 export const navigation = [
-  { name: 'Home', href: '/home' },
-  { name: 'About', href: '/about' },
-  { name: 'Service', href: '/service' },
-  { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Home', href: '/home', id: 'home' },
+  { name: 'About', href: '/about', id: 'about' },
+  { name: 'Service', href: '/service', id: 'service' },
+  { name: 'Portfolio', href: '/portfolio', id: 'portfolio' },
+  { name: 'Blog', href: '/blog', id: 'blog' },
+  { name: 'Contact', href: '/contact', id: 'contact' },
 ];
 
 
@@ -65,14 +65,14 @@ export const typeOfProperty = [
 export const testimony = [
   {
     review: Review1,
-    text: 'Moderate children at of outweigh it. Unsatiable it considered invitation he travelling insensible. Consulted admitting oh mr up as described.',
+    text: 'SmartSpace is simply the best place to be right now. Working in the same place with other professionals gives a sense of motivation',
     dp: Dp1,
     name: 'Jane Cooper',
     city: 'Los Angeles, CA'
   },
   {
     review: Review2,
-    text: 'The and collecting motionless difficulty son. His hearing staying ten colonel met. Sex drew six easy four dear cold',
+    text: "SmartSpace is a community where everyone is welcome. It's where ideas happen. It's where people from all backgrounds come to work together.",
     dp: Dp2,
     name: 'Robert Fox',
     city: 'New York City, NY'

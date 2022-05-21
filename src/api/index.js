@@ -4,11 +4,10 @@ const URL = 'https://bayut.p.rapidapi.com/properties/list';
 
 const options = {
   params: {
-    locationExternalIDs: '5002,6020',
-    purpose: 'for-rent',
-    hitsPerPage: '25',
+    locationExternalIDs: '5002,6020', //Required
+    purpose: 'for-sale',
+    hitsPerPage: '50',
     lang: 'en',
-    sort: 'city-level-score',
   },
   headers: {
     'X-RapidAPI-Host': 'bayut.p.rapidapi.com',
