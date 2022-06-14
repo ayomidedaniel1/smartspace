@@ -2,9 +2,9 @@ import React, { Suspense } from 'react';
 import Loader from '../helpers/Loader';
 
 const Header = React.lazy(() => import('../components/Header'));
-const Service = React.lazy(() => import('../components/Service'));
 const About = React.lazy(() => import('../containers/About'));
 const Features = React.lazy(() => import('../containers/Features'));
+const Service = React.lazy(() => import('../components/Service'));
 const Testimonial = React.lazy(() => import('../containers/Testimonial'));
 
 const LandingPage = ({ element }) => {

@@ -11,7 +11,7 @@ const Navbar = ({ sticky }) => {
   const closeMobileMenu = () => setToggleMenu(false);
 
   return (
-    <nav className={sticky ? 'navbar navbar-sticky h-16 bg-white text-black shadow-sm text-base font-bold right-0 px-5 justify-between' : 'flex justify-between items-center h-16 bg-white text-black relative shadow-sm text-base font-bold'}>
+    <nav className={sticky ? 'navbar navbar-sticky h-20 bg-white text-black rounded-3xl shadow-md text-base font-bold right-0 px-5 justify-between' : 'flex justify-between items-center h-20 bg-white text-black relative rounded-full shadow-md text-base font-bold mt-1'}>
       <Link to='/' className='lg:pl-10 md:pl-3 sm:pl-1 pl-0' role="navigation">
         <span className="font-manrope text-text-black md:text-2xl text-xl font-extrabold cursor-pointer">SmartSpace</span>
       </Link>

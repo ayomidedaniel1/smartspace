@@ -91,6 +91,7 @@ html {
   }
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -102,6 +103,6 @@ html {
 .navbar-sticky {
   position: fixed;
   top: 0;
-  box-shadow: 1px 1px 1px #e6c041;
+  box-shadow: 1px 1px 1px #eee;
   animation: moveDown 0.5s ease-in-out;
 }
