@@ -1,20 +1,22 @@
-import React from 'react';
-import { Footer, Header, Navbar, Service } from '../components';
-import { About, Features, Testimonial } from '../containers';
-import useSticky from "../hooks/useSticky";
+import React, { Suspense } from 'react';
+import Loader from '../helpers/Loader';
 
-const LandingPage = () => {
-  const { isSticky, element } = useSticky();
+const Header = React.lazy(() => import('../components/Header'));
+const Service = React.lazy(() => import('../components/Service'));
+const About = React.lazy(() => import('../containers/About'));
+const Features = React.lazy(() => import('../containers/Features'));
+const Testimonial = React.lazy(() => import('../containers/Testimonial'));
 
+const LandingPage = ({ element }) => {
   return (
     <div className='container'>
-      <Navbar sticky={isSticky} />
-      <Header element={element} />
-      <About />
-      <Features />
-      <Service />
-      <Testimonial />
-      <Footer />
+      <Suspense fallback={<Loader />}>
+        <Header element={element} />
+        <About />
+        <Features />
+        <Service />
+        <Testimonial />
+      </Suspense>
     </div>
   );
 };
