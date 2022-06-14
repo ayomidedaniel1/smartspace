@@ -90,3 +90,18 @@ html {
     transform: translateZ(0);
   }
 }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 40;
+  width: 100%;
+}
+
+.navbar-sticky {
+  position: fixed;
+  top: 0;
+  box-shadow: 1px 1px 1px #e6c041;
+  animation: moveDown 0.5s ease-in-out;
+}

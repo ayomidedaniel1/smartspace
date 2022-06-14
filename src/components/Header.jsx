@@ -1,24 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillLinkedin } from 'react-icons/ai';
 import { Head, Buzz, Chase, Microsoft, Gucc, Airbnb, Uber } from '../assets';
+import { useNavigate } from 'react-router-dom';
 
-import { getPropertiesData } from '../api/index';
-
-const Header = () => {
-  const [properties, setProperties] = useState([]);
-
-  console.log(properties);
-
-  useEffect(() => {
-    getPropertiesData()
-      .then((data) => {
-        console.log(data);
-        setProperties(data);
-      });
-  }, []);
+const Header = ({ element }) => {
+  const navigate = useNavigate();
 
   return (
-    <div id='home' className="h-full flex flex-col lg:flex-row md:justify-between lg:mt-20 md:mt-10 mt-6 lg:px-10 md:mb-10">
+    <div id='home' className="h-full flex flex-col lg:flex-row md:justify-between lg:mt-20 md:mt-10 mt-6 lg:px-10 md:mb-10" ref={element}>
       <div className="flex flex-col fadeLeftMini">
         <h3 className='uppercase font-dmsans font-bold text-text-orange lg:text-lg md:text-base sm:text-sm text-xs'>
           residential and office space
@@ -36,14 +25,16 @@ const Header = () => {
             className='input form-input md:h-14 sm:h-12 h-10
             md:w-96 sm:w-72 w-40 font-manrope md:text-sm text-[0.5rem] 
             text-text-black opacity-40 tracking-[0.01rem] mr-0'
-            placeholder='Enter Zipcode to search properties'
+            placeholder='Search for Apartments and Residential homes'
           />
           <input
             type="submit"
             value='Search Now!'
             className='form-input md:h-14 sm:h-12 h-10 md:w-40 sm:w-32
             w-24 bg-[#f85a47] hover:bg-red-700 text-white tracking-[0.01rem]
-            md:text-base sm:text-sm text-xs md:leading-5 sm:leading-4 leading-3 font-bold' />
+            md:text-base sm:text-sm text-xs md:leading-5 sm:leading-4 leading-3 font-bold'
+            onClick={() => navigate('/list')}
+          />
         </div>
 
         <div className="lg:mt-16 md:mt-4 mt-1">

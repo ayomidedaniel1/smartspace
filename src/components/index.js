@@ -5,4 +5,3 @@ export { default as Navbar } from './Navbar';
 export { default as Service } from './Service';
 export { default as Testimonies } from './Testimonies';
 export { default as Works } from './Works';
-export { default as List } from './List';

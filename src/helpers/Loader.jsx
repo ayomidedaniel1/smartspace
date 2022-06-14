@@ -1,9 +1,9 @@
-import React from 'react';
+import { CgSpinner } from "react-icons/cg";
 
 const Loader = () => {
   return (
-    <div>
-      Loading
+    <div className='h-screen grid place-items-center'>
+      <CgSpinner className="text-white text-5xl animate-spin" />
     </div>
   );
 };

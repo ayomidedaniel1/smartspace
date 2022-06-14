@@ -1,10 +1,12 @@
 import React from 'react';
 import { typeOfProperty, propertyData } from '../constants';
-// import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 import { Property } from '../components';
 
 const Features = () => {
+  const navigate = useNavigate();
+
   return (
     <div id='portfolio' className='flex flex-col md:mt-32 mt-16 px-0 sm:px-6'>
       <div className="flex md:flex-row flex-col items-center">
@@ -17,7 +19,9 @@ const Features = () => {
         <div className="flex md:ml-40 lg:ml-64 md:mr-0 lg:pl-44 md:pl-10 pl-32">
           <input className='prop form-input bg-[#f85a47] hover:bg-red-700 cursor-pointer
           rounded-md font-manrope font-medium md:text-sm text-[0.6rem] md:py-3 md:px-5 py-1 px-3 text-center text-white'
-            type="button" value="View All Property" />
+            type="button" value="View All Property"
+            onClick={() => navigate('/list')}
+          />
         </div>
       </div>
 
