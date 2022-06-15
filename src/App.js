@@ -10,11 +10,12 @@ const App = () => {
   const { isSticky, element } = useSticky();
 
   const [properties, setProperties] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getPropertiesData()
       .then((data) => {
+        console.log(data);
         setProperties(data);
         setIsLoading(false);
       });
