@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Hits = () => {
+const Hits = ({ price, name, img, location }) => {
   return (
-    <div className=''>
+    <div className='shadow rounded-xl md:rounded-2xl'>
       Hits
     </div>
   );
