@@ -15,7 +15,6 @@ const App = () => {
   useEffect(() => {
     getPropertiesData()
       .then((data) => {
-        console.log(data);
         setProperties(data);
         setIsLoading(false);
       });
