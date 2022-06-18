@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { LandingPage, List, Details } from './pages';
 import useSticky from './hooks/useSticky';
 
 import { getPropertiesData } from './api';
 import { Footer, Navbar } from './components';
+import Loader from './helpers/Loader';
+
+const LandingPage = React.lazy(() => import('./pages/LandingPage'));
+const List = React.lazy(() => import('./pages/List'));
+const Details = React.lazy(() => import('./pages/Details'));
 
 const App = () => {
   const { isSticky, element } = useSticky();
@@ -22,13 +26,15 @@ const App = () => {
 
   return (
     <div className='container'>
-      <Navbar sticky={isSticky} />
-      <Routes>
-        <Route path='/' element={<LandingPage element={element} />} />
-        <Route path='/list' element={<List isLoading={isLoading} properties={properties} element={element} />} />
-        <Route path='/details/:propertyId' element={<Details properties={properties} />} />
-      </Routes>
-      <Footer />
+      <Suspense fallback={<Loader />}>
+        <Navbar sticky={isSticky} />
+        <Routes>
+          <Route path='/' element={<LandingPage element={element} />} />
+          <Route path='/list' element={<List isLoading={isLoading} properties={properties} element={element} />} />
+          <Route path='/:propertyId' element={<Details properties={properties} />} />
+        </Routes>
+        <Footer />
+      </Suspense>
     </div>
   );
 };
