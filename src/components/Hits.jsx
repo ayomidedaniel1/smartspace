@@ -1,12 +1,10 @@
 import millify from 'millify';
 import React from 'react';
-import { MdVerifiedUser } from 'react-icons/md';
 
-const Hits = ({ price, name, img, rooms, baths, verified, element }) => {
+const Hits = ({ price, name, img, rooms, baths, element }) => {
 
   return (
-    <div className='shadow rounded-xl md:rounded-2xl flex flex-col relative justify-center hover:shadow-md hover:shadow-slate-500' ref={element} >
-      {verified && <MdVerifiedUser className='absolute top-2 right-2' size={20} />}
+    <div className='shadow rounded-xl md:rounded-2xl flex flex-col relative hover:shadow-md hover:shadow-slate-500' ref={element} >
       <div className="flex mb-3">
         <img src={img} alt="img" className="rounded-2xl w-full h-64 cursor-pointer" />
       </div>
