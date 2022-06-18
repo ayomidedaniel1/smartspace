@@ -22,12 +22,12 @@ export const worksData = [
 ];
 
 export const navigation = [
-  { name: 'Home', href: '#home', id: 'home' },
-  { name: 'About', href: '#about', id: 'about' },
-  { name: 'Service', href: '#service', id: 'service' },
-  { name: 'Portfolio', href: '#portfolio', id: 'portfolio' },
-  { name: 'Blog', href: '#blog', id: 'blog' },
-  { name: 'Contact', href: '#contact', id: 'contact' },
+  { name: 'Home', href: '#home' },
+  { name: 'About', href: '#about' },
+  { name: 'Service', href: '#service' },
+  { name: 'Portfolio', href: '#portfolio' },
+  { name: 'Blog', href: '#blog' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export const propertyData = [

@@ -5,7 +5,7 @@ import { MdVerifiedUser } from 'react-icons/md';
 const Hits = ({ price, name, img, rooms, baths, verified, element }) => {
 
   return (
-    <div className='shadow rounded-xl md:rounded-2xl flex flex-col relative justify-center hover:shadow-2xl hover:shadow-slate-900' ref={element} >
+    <div className='shadow rounded-xl md:rounded-2xl flex flex-col relative justify-center hover:shadow-md hover:shadow-slate-500' ref={element} >
       {verified && <MdVerifiedUser className='absolute top-2 right-2' size={20} />}
       <div className="flex mb-3">
         <img src={img} alt="img" className="rounded-t-2xl w-full h-64 cursor-pointer" />

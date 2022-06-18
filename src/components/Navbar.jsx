@@ -21,24 +21,24 @@ const Navbar = ({ sticky }) => {
       {toggleMenu ? <div className="lg:hidden flex flex-col absolute bg-gray-200 z-10 w-full
       h-screen top-0 left-0 duration-500 ease-linear slide-bottom justify-center">
         {navigation.map((item) => (
-          <Link
+          <a
             key={item.name}
-            to={item.href}
+            href={item.href}
             onClick={closeMobileMenu}
             className='text-center p-6'
           >
             {item.name}
-          </Link>
+          </a>
         ))}
       </div> : <div className="md:pr-10 sm:pr-4 pr-0 lg:block hidden">
         {navigation.map((item) => (
-          <Link
+          <a
             key={item.name}
-            to={item.href}
+            href={item.href}
             className='p-4 hover:underline'
           >
             {item.name}
-          </Link>
+          </a>
         ))}
       </div>}
     </nav>
