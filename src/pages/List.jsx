@@ -9,7 +9,7 @@ const List = ({ isLoading, properties, element }) => {
   const propsData = properties.hits;
 
   return (
-    <div className='grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:mt-20 md:mt-10 mt-6 lg:px-10 md:mb-10'>
+    <div className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:mt-20 mt-10 px-3 md:px-5 lg:px-10 md:mb-10'>
       {isLoading && <Loader />}
       {propsData?.map(item => (
         <Link to={`/${item.slug}`} key={item.id}>

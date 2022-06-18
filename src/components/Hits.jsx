@@ -8,7 +8,7 @@ const Hits = ({ price, name, img, rooms, baths, verified, element }) => {
     <div className='shadow rounded-xl md:rounded-2xl flex flex-col relative justify-center hover:shadow-md hover:shadow-slate-500' ref={element} >
       {verified && <MdVerifiedUser className='absolute top-2 right-2' size={20} />}
       <div className="flex mb-3">
-        <img src={img} alt="img" className="rounded-t-2xl w-full h-64 cursor-pointer" />
+        <img src={img} alt="img" className="rounded-2xl w-full h-64 cursor-pointer" />
       </div>
       <div className="px-2">
         <span className="font-inter text-black font-medium text-sm">
