@@ -24,9 +24,8 @@ export const worksData = [
 export const navigation = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
-  { name: 'Service', href: '#service' },
   { name: 'Portfolio', href: '#portfolio' },
-  { name: 'Blog', href: '#blog' },
+  { name: 'Service', href: '#service' },
   { name: 'Contact', href: '#contact' },
 ];
 
