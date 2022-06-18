@@ -25,8 +25,8 @@ const App = () => {
       <Navbar sticky={isSticky} />
       <Routes>
         <Route path='/' element={<LandingPage element={element} />} />
-        <Route path='/list' element={<List isLoading={isLoading} properties={properties} />} />
-        <Route path='/details' element={<Details />} />
+        <Route path='/list' element={<List isLoading={isLoading} properties={properties} element={element} />} />
+        <Route path='/details/:propertyId' element={<Details properties={properties} />} />
       </Routes>
       <Footer />
     </div>

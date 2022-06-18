@@ -2,9 +2,10 @@ import millify from 'millify';
 import React from 'react';
 import { MdVerifiedUser } from 'react-icons/md';
 
-const Hits = ({ price, name, img, rooms, baths, verified }) => {
+const Hits = ({ price, name, img, rooms, baths, verified, element }) => {
+
   return (
-    <div className='shadow rounded-xl md:rounded-2xl flex flex-col relative justify-center'>
+    <div className='shadow rounded-xl md:rounded-2xl flex flex-col relative justify-center' ref={element} >
       {verified && <MdVerifiedUser className='absolute top-2 right-2' size={20} />}
       <div className="flex mb-3">
         <img src={img} alt="img" className="rounded-t-2xl w-full h-64 cursor-pointer" />
