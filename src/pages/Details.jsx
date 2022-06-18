@@ -8,7 +8,7 @@ const Details = ({ properties }) => {
   console.log(hits);
 
   return (
-    <div className=''>
+    <div className='flex lg:mt-20 md:mt-10 mt-6 lg:px-10 md:mb-10'>
       Property Details
     </div>
   );
