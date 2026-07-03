@@ -3,7 +3,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { RiCloseLine, RiMenu3Line } from 'react-icons/ri';
-import { navigation } from '../constants';
+import { navigation, StaticAsset } from '../constants';
+import { Logo } from '../assets';
+
+const getSrc = (asset: StaticAsset): string => {
+  if (typeof asset === 'string') return asset;
+  return asset.src;
+};
 
 export interface NavbarProps {
   sticky: boolean;
@@ -24,9 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ sticky }) => {
       }
     >
       <Link href='/' className='flex items-center'>
-        <span className="font-manrope text-text-black md:text-2xl text-xl font-extrabold cursor-pointer hover:text-[#f85a47] transition-colors">
-          SmartSpace
-        </span>
+        <img src={getSrc(Logo)} alt="SmartSpace" className="h-14 w-auto object-contain hover:opacity-80 transition-opacity" />
       </Link>
       
       <button 

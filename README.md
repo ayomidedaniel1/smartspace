@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# SmartSpace - Premium Coworking & Coliving Space Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SmartSpace is a modern web application designed for hybrid workers, remote developers, and digital nomads to find and book premium coworking offices, dedicated desks, and coliving studios equipped with work-focused amenities across **Nigeria, the United States, and the United Kingdom**.
 
-## Available Scripts
+![SmartSpace Hero Mockup](src/assets/Header.svg)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 💡 The Real-Life Problem & Solution
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The Problem
+Traditional real estate listing portals prioritize basic specifications (number of bedrooms, bathrooms, sale price) but ignore essential details needed by modern remote workers:
+- Availability of constant backup power/solar systems.
+- Verified fiber internet speeds.
+- Access to private, soundproof call booths and meeting rooms.
+- Ergonomic chairs (Steelcase, Herman Miller) and monitor rentals.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The Solution
+SmartSpace provides a curated space finder featuring:
+1. **Interactive Search & Multi-Factor Filters**: Users can browse spaces and instantly filter listings by country, space category (Hot Desk, Dedicated Desk, Private Office, Coliving), price range, and a checklist of developer-focused productivity amenities.
+2. **Interactive Workspace Booking Simulator**: Dynamic property detail pages display comprehensive specifications, host profiles, and a booking simulator that computes total costs in real-time, applies duration-based volume discounts, and generates a mock reservation confirmation ticket.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Technology Stack
 
-### `npm run build`
+- **Core Framework**: [Next.js 14 (App Router)](https://nextjs.org/)
+- **Programming Language**: [TypeScript](https://www.typescriptlang.org/) (Strict compilation, type-safety, no `any` fallback types)
+- **Styling**: [Tailwind CSS v3](https://tailwindcss.com/) & Vanilla CSS
+- **Package Manager**: [pnpm](https://pnpm.io/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🏃 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) (v18.x or later) and [pnpm](https://pnpm.io/) installed.
 
-### `npm run eject`
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ayomidedaniel1/smartspace.git
+   cd smartspace
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Run the development server:
+   ```bash
+   pnpm dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Build for production:
+   ```bash
+   pnpm build
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Start the production build:
+   ```bash
+   pnpm start
+   ```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📂 Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+├── app/                             # Next.js App Router Pages & Layouts
+│   ├── [propertyId]/                # Workspace details & booking simulator
+│   ├── list/                        # Coworking search engine & filter panel
+│   ├── globals.css                  # Tailwinds & custom utility classes
+│   ├── layout.tsx                   # Font configurations & layout wrappers
+│   ├── page.tsx                     # Landing home page
+│   └── icon.png                     # Branding logo / shortcut icon
+├── src/
+│   ├── api/
+│   │   └── index.ts                 # Typed coworking space data provider
+│   ├── assets/                      # SVGs & PNG vector assets
+│   ├── components/                  # Shared modular React UI components
+│   ├── constants/                   # Navigation items, testimonial constants
+│   ├── containers/                  # Landing page structure sections
+│   ├── hooks/
+│   │   └── useSticky.ts             # Memory-leak-free scroll sticky hook
+│   ├── helpers/
+│   │   └── Loader.tsx               # CgSpinner loading wrapper
+│   └── types/
+│       └── svg.d.ts                 # TypeScript module asset declarations
+├── tsconfig.json                    # TS compiler configuration
+├── tailwind.config.js               # Tailwind scanning setups
+└── package.json                     # Dependency manifest
+```

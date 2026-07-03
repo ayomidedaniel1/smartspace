@@ -21,3 +21,4 @@ export { default as Dp2 } from './Dp2.svg';
 export { default as Dp3 } from './Dp3.svg';
 export { default as Ebay } from './Ebay.svg';
 export { default as Cisco } from './Cisco.svg';
+export { default as Logo } from './Logo.png';

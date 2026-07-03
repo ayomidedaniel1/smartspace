@@ -1,6 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { navigation } from '../constants';
+import { navigation, StaticAsset } from '../constants';
+import { Logo } from '../assets';
+
+const getSrc = (asset: StaticAsset): string => {
+  if (typeof asset === 'string') return asset;
+  return asset.src;
+};
 
 const Footer: React.FC = () => {
   return (
@@ -34,7 +40,7 @@ const Footer: React.FC = () => {
 
       <div className="flex flex-col md:flex-row justify-between items-center h-16 bg-white text-black md:text-xs text-[0.5rem] w-full font-bold px-4">
         <Link href='/' className='lg:pl-40 md:pl-20 pl-0 mt-4 md:mt-0'>
-          <span className="font-manrope text-text-black md:text-lg text-[0.6rem] font-extrabold cursor-pointer">SmartSpace</span>
+          <img src={getSrc(Logo)} alt="SmartSpace" className="h-12 w-auto object-contain hover:opacity-80 transition-opacity" />
         </Link>
         <div className="lg:pr-10 pr-0 flex space-x-2 md:space-x-6">
           {navigation.map((item) => (
